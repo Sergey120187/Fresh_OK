@@ -1,6 +1,10 @@
-// body {
-
-// }
+body {
+  @extend %OS-400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $dark-900;
+  background-color: #ccc;
+}
 
 .container {
   max-width: 1320px;
