@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Open Sans - Light';
   src: local('Open Sans'),
-      url('OpenSans-Light.woff2') format('woff2'),
-      url('OpenSans-Light.woff') format('woff');
+      url('../fonts/OpenSans-Light.woff2') format('woff2'),
+      url('../fonts/OpenSans-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -10,8 +10,8 @@
 @font-face {
   font-family: 'Open Sans - Regular';
   src: local('Open Sans'), 
-      url('OpenSans-Regular.woff2') format('woff2'),
-      url('OpenSans-Regular.woff') format('woff');
+      url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+      url('../fonts/OpenSans-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,8 +20,8 @@
 @font-face {
   font-family: 'Open Sans - SemiBold';
   src: local('Open Sans'), 
-      url('OpenSans-SemiBold.woff2') format('woff2'),
-      url('OpenSans-SemiBold.woff') format('woff');
+      url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+      url('../fonts/OpenSans-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -30,8 +30,8 @@
 @font-face {
   font-family: 'Open Sans - Bold';
   src: local('Open Sans'),
-      url('OpenSans-Bold.woff2') format('woff2'),
-      url('OpenSans-Bold.woff') format('woff');
+      url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+      url('../fonts/OpenSans-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -40,8 +40,8 @@
 @font-face {
   font-family: 'Ruda-Regular';
   src: local('Ruda'), 
-      url('Ruda-Regular.woff2') format('woff2'),
-      url('Ruda-Regular.woff') format('woff');
+      url('../fonts/Ruda-Regular.woff2') format('woff2'),
+      url('../fonts/Ruda-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -50,8 +50,8 @@
 @font-face {
   font-family: 'Ruda-SemiBold';
   src: local('Ruda'), 
-      url('Ruda-SemiBold.woff2') format('woff2'),
-      url('Ruda-SemiBold.woff') format('woff');
+      url('../fonts/Ruda-SemiBold.woff2') format('woff2'),
+      url('../fonts/Ruda-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -60,8 +60,8 @@
 @font-face {
   font-family: 'Ruda-Bold';
   src: local('Ruda'), 
-      url('Ruda-Bold.woff2') format('woff2'),
-      url('Ruda-Bold.woff') format('woff');
+      url('../fonts/Ruda-Bold.woff2') format('woff2'),
+      url('../fonts/Ruda-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -70,8 +70,8 @@
 @font-face {
   font-family: 'Ruda-Black';
   src: local('Ruda'), 
-      url('Ruda-Black.woff2') format('woff2'),
-      url('Ruda-Black.woff') format('woff');
+      url('../fonts/Ruda-Black.woff2') format('woff2'),
+      url('../fonts/Ruda-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
