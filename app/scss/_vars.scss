@@ -48,3 +48,10 @@ $white: #ffffff;
   font-weight: 900;
 }
 
+%psevdo {
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
