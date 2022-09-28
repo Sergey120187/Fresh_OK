@@ -3,7 +3,7 @@
 @import 'reset';
 @import 'global';
 
-.header-top {
+.header__top {
   @extend %OS-700;
   font-size: 13px;
   letter-spacing: 0.03em; 
@@ -57,12 +57,12 @@
     display: flex;
     align-items: center;
   }
-  &__list-btn, &__search {
+  &__catalog, &__search {
     background-color: $white;
     height: 50px;
     width: 100%;
   }
-  &__list-btn {
+  &__catalog {
     position: relative;
     max-width: 240px;
     border-radius: 6px;
@@ -73,7 +73,7 @@
     color: $green-900;
     letter-spacing: 0.03em;
   }
-  &__list-btn::before {
+  &__catalog::before {
     @extend %psevdo;
     width: 34px;
     height: 25px;
@@ -81,7 +81,7 @@
     top: 16px;
     background-image: url('../images/header-icon/icon-nav.svg');
   }
-  &__list-btn::after {
+  &__catalog::after {
     @extend %psevdo;
     width: 8px;
     height: 8px;
@@ -98,7 +98,7 @@
   }
   &__search {
     border-radius: 6px 0 0 6px;
-    padding-left: 51px;
+    padding: 0 15px 0 51px;
     position: relative;
     background-image: url('../images/header-icon/icon-search.svg');
     background-repeat: no-repeat;
