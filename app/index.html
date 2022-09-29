@@ -1,12 +1,74 @@
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ФРЕШОК | Онлайн-Маркет</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicon180.png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+
+  <header class="header">
+    <nav class="header__nav">
+      <div class="header__top">
+        <div class="container">
+          <div class="menu">
+            <ul class="menu__left">
+              <li class="menu__left-item">
+                <a class="menu__left-link menu__left-link--delivery" href="#">Адрес и время доставки</a>
+              </li>
+              <li class="menu__left-item">
+                <a class="menu__left-link menu__left-link--phone" href="tel:+7907288365">Горячая линия 24/7</a>
+              </li>
+            </ul>
+            <ul class="menu__right">
+              <li class="menu__right-item">
+                <a class="menu__right-link" href="#">Доставка</a>
+              </li>
+              <li class="menu__right-item">
+                <a class="menu__right-link" href="#">О нас</a>
+              </li>
+              <li class="menu__right-item">
+                <a class="menu__right-link" href="#">Новости</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="container">
+          <div class="header-main__inner">
+            <a class="header__logo" href="#">
+              <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип">
+            </a>
+            <button class="header-main__catalog" type="button">Каталог продуктов</button>
+            <form class="form-search">
+              <input class="form-search__field" type="search" name="search" placeholder="Найти в магазине ..." aria-label="Найти в магазине" required>
+              <button class="form-search__btn" type="submit">Поиск</button>
+            </form>
+            <div class="user-nav">
+              <a class="user-nav__link psevdo" href="#" style="background-image: url('images/header-icon/icon-user.svg')" title="Профиль">
+                <span class="sr-only">Профиль</span>
+              </a>
+              <a class="user-nav__link psevdo" href="#" style="background-image: url('images/header-icon/icon-heart.svg')" title="Избранное">
+                <span class="sr-only">Избранное</span>
+                <span class="user-nav__num">12</span>
+              </a>
+              <button class="user-nav__link psevdo" type="button" style="background-image: url('images/header-icon/icon-cart.svg')"title="Корзина">
+                <span class="sr-only">Корзина</span>
+                <span class="user-nav__num">12</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
 
   <script src="js/main.min.js"></script>
 </body>

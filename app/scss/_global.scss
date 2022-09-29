@@ -1,0 +1,39 @@
+body {
+  font-family: $OS;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $dark-900;
+  background-color: #ccc;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.psevdo {
+  @include psevdo();
+}
+
+.logo {
+  &__img {
+    max-width: 200px;
+    height: 60px;
+    object-fit: contain;
+  }
+}
