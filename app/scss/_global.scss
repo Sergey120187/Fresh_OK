@@ -29,3 +29,11 @@ body {
 .psevdo {
   @include psevdo();
 }
+
+.logo {
+  &__img {
+    max-width: 200px;
+    height: 60px;
+    object-fit: contain;
+  }
+}
