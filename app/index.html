@@ -45,22 +45,22 @@
               <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип">
             </a>
             <button class="header-main__catalog" type="button">Каталог продуктов</button>
-            <form class="header-main__form">
-              <input class="header-main__search" type="search" name="search" placeholder="Найти в магазине ..." aria-label="Найти в магазине" required>
-              <button class="header-main__search-btn" type="submit">Поиск</button>
+            <form class="form-search">
+              <input class="form-search__field" type="search" name="search" placeholder="Найти в магазине ..." aria-label="Найти в магазине" required>
+              <button class="form-search__btn" type="submit">Поиск</button>
             </form>
             <div class="user-nav">
-              <a class="user-nav__link" href="#">
-                <img class="user-nav__img" src="images/header-icon/icon-user.svg" width="25" height="32" alt="Перейти в профиль">
+              <a class="user-nav__link psevdo" href="#" style="background-image: url('images/header-icon/icon-user.svg')" title="Профиль">
+                <span class="sr-only">Профиль</span>
               </a>
-              <a class="user-nav__link" href="#">
-                <img class="user-nav__img" src="images/header-icon/icon-heart.svg" width="32" height="28" alt="Перейти к избранному">
+              <a class="user-nav__link psevdo" href="#" style="background-image: url('images/header-icon/icon-heart.svg')" title="Избранное">
+                <span class="sr-only">Избранное</span>
                 <span class="user-nav__num">12</span>
               </a>
-              <a class="user-nav__link" href="#">
-                <img class="user-nav__img" src="images/header-icon/icon-cart.svg" width="32" height="31" alt="Перейти в корзину">
+              <button class="user-nav__link psevdo" type="button" style="background-image: url('images/header-icon/icon-cart.svg')"title="Корзина">
+                <span class="sr-only">Корзина</span>
                 <span class="user-nav__num">12</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>

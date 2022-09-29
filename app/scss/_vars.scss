@@ -10,48 +10,7 @@ $yellow-900: #FFB800;
 $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #ffffff;
+$black: #000000;
 
-%OS-300 {
-  font-family: 'Open Sans - Light';
-  font-weight: 300;
-}
-%OS-400 {
-  font-family: 'Open Sans - Regular';
-  font-weight: 400;
-}
-%OS-600 {
-  font-family: 'Open Sans - SemiBold';
-  font-weight: 600;
-}
-%OS-700 {
-  font-family: 'Open Sans - Bold';
-  font-weight: 700;
-}
-
-%Ruda-400 {
-  font-family: 'Ruda-Regular';
-  font-weight: 400;
-}
-
-%Ruda-600 {
-  font-family: 'Ruda-SemiBold';
-  font-weight: 600;
-}
-
-%Ruda-700 {
-  font-family: 'Ruda-Bold';
-  font-weight: 700;
-}
-
-%Ruda-900 {
-  font-family: 'Ruda-Black';
-  font-weight: 900;
-}
-
-%psevdo {
-  position: absolute;
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
+$OS: 'Open Sans';
+$Ruda: 'Ruda';
