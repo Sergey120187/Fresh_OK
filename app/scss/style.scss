@@ -7,32 +7,17 @@
 .header {
   &__logo {
     margin-right: 24px;
-    transition: opacity $t, box-shadow $t, border-radius $t, background-color $t;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:focus {
-      box-shadow: 0px 0px 0px 3px $green-100;
-      border-radius: 3px;
-    }
-
-    &:active {
-      background-color: rgba($white, 0.1);
-    }
   }
-}
 
-.header__top {
-  font-family: $OS;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $dark-800;
-  padding: 17px 0 15px;
+  &__top {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $dark-800;
+    padding: 17px 0 15px;
+  }
 }
 
 .menu {
@@ -44,53 +29,28 @@
     display: flex;
   }
 
-  &__left {
-    padding-left: 45px;
-  }
-
-  &__left-item {
-    &:not(:last-child) {
-      margin-right: 82px;
-    }
-  }
-
-  &__left-link {
+  &__left-link,
+  &__right-link {
     position: relative;
     transition: opacity $t, box-shadow $t, border-radius $t, color $t;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-100;
+      border-radius: 3px;
+    }
 
     &:hover {
       opacity: 0.7;
     }
 
-    &:focus {
-      box-shadow: 0px 0px 0px 3px $green-100;
-      border-radius: 3px;
-    }
-
     &:active {
       color: $green-200;
     }
+  }
 
-    &::before {
-      @include psevdo;
-      height: 22px;
-      top: -3px;
-    }
-
-    &--phone {
-      &::before {
-        width: 23px;
-        background-image: url('../images/icons/header_icon/icon-phone.svg');
-        left: -34px;
-      }
-    }
-
-    &--delivery {
-      &::before {
-        width: 32px;
-        background-image: url('../images/icons/header_icon/icon-delivery.svg');
-        left: -44px;
-      }
+  &__left-item {
+    &:not(:last-child) {
+      margin-right: 37px;
     }
   }
 
@@ -100,20 +60,32 @@
     }
   }
 
-  &__right-link {
-    transition: opacity $t, box-shadow $t, border-radius $t, color $t;
+  &__left-link {
+    padding-left: 45px;
 
-    &:hover {
-      opacity: 0.7;
+    &::before {
+      @include psevdo;
+      height: 23px;
+      top: -3px;
     }
 
-    &:focus {
-      box-shadow: 0px 0px 0px 3px $green-100;
-      border-radius: 3px;
+    &--delivery {
+      
+      &::before {
+        width: 32px;
+        background-image: url('../images/icons/header-icon/icon-delivery.svg');
+        left: 0;
+      }
     }
+    
+    &--phone {
+      
 
-    &:active {
-      color: $green-200;
+      &::before {
+        width: 23px;
+        background-image: url('../images/icons/header-icon/icon-phone.svg');
+        left: 11px;
+      }
     }
   }
 }
@@ -130,10 +102,11 @@
   &__catalog {
     background-color: $white;
     height: 50px;
-    min-width: 240px;
+    width: 240px;
     position: relative;
     border-radius: 6px;
-    padding-left: 24px;
+    padding-left: 61px;
+    text-align-last: left;
     margin-right: 30px;
     font-weight: 600;
     font-size: 14px;
@@ -148,23 +121,27 @@
   }
 
   &__catalog {
-    &::before {
+
+    &::before,
+    &::after {
       @include psevdo;
+    }
+
+    &::before {
       width: 34px;
       height: 25px;
       left: 15px;
-      background-image: url('../images/icons/header_icon/icon-nav.svg');
+      background-image: url('../images/icons/header-icon/icon-nav.svg');
     }
   }
 
   &__catalog {
     &::after {
-      @include psevdo;
       width: 8px;
       height: 8px;
       right: 18px;
       top: 22px;
-      background-image: url('../images/icons/header_icon/icon-chevron.svg');
+      background-image: url('../images/icons/header-icon/icon-chevron.svg');
     }
   }
 }
@@ -173,16 +150,17 @@
   display: flex;
   max-width: 576px;
   width: 100%;
-  height: 50px;
+  font-size: 14px;
   margin-right: auto;
   margin-block-end: 0;
 
   &__field {
+    max-width: 418px;
     width: 100%;
     background-color: $white;
-    padding: 0 15px 0 51px;
-    border-radius: 6px 0px 0px 6px;
-    background-image: url('../images/icons/header_icon/icon-search.svg');
+    padding: 15px 15px 15px 51px;
+    border-radius: 6px 0 0 6px;
+    background-image: url('../images/icons/header-icon/icon-search.svg');
     background-repeat: no-repeat;
     background-position: 13px center;
     transition: box-shadow $t, border-radius $t;
@@ -195,27 +173,27 @@
 
     &:focus {
       box-shadow: 0 0 0 4px rgba($white, 0.5);
-      border-radius: 6px 0px 0px 6px;
+      border-radius: 6px 0 0 6px;
     }
   }
 
   &__btn {
-    min-width: 158px;
+    width: 158px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-weight: 600;
     letter-spacing: 0.03em;
     color: $white;
     background-color: $dark-800;
     border-radius: 0 6px 6px 0;
     transition: background-color $t, box-shadow $t, border-radius $t, color $t;
 
-    &:hover {
-      background-color: rgba($dark-800, 0.85);
-    }
-
     &:focus {
       box-shadow: 0 0 0 4px rgba($white, 0.5);
       border-radius: 0 6px 6px 0;
+    }
+
+    &:hover {
+      background-color: rgba($dark-800, 0.85);
     }
 
     &:active {
@@ -226,7 +204,6 @@
 
 .user-nav {
   display: flex;
-  margin-right: 7px;
   padding-left: 30px;
 
   &__item {
@@ -241,17 +218,43 @@
     position: relative;
     width: 50px;
     height: 50px;
-    background-size: 32px 32px;
+    padding: 9px;
     transition: background-color $t, border-radius $t, box-shadow $t, opacity $t;
 
-    &:hover {
-      background-color: rgba($white, 0.1);
-      border-radius: 3px;
+    &::before {
+      @include psevdo;
+      width: 32px;
+      height: 32px;
+    }
+
+    &--profile {
+      &::before {
+        background-image: url('../images/icons/header-icon/icon-user.svg');
+      }
+    }
+
+    &--favourites {
+      &::before {
+        background-image: url('../images/icons/header-icon/icon-heart.svg');
+      }
+    }
+
+    &--cart {
+      &::before {
+        left: 9px;
+        top: 9px;
+        background-image: url('../images/icons/header-icon/icon-cart.svg');
+      }
     }
 
     &:focus {
       background-color: rgba($white, 0.1);
-      box-shadow: inset 0px 0px 0px 3px $green-100;
+      box-shadow: inset 0 0 0 3px $green-100;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      background-color: rgba($white, 0.1);
       border-radius: 3px;
     }
 
@@ -266,7 +269,7 @@
     height: 18px;
     border-radius: 50%;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 10;
     text-align: center;
     line-height: 18px;
     background-color: $white;
@@ -282,26 +285,11 @@
   color: $white;
 
   &__logo {
-    display: inline-block;
-    margin-bottom: 30px;
-    transition: opacity $t, box-shadow $t, border-radius $t, background-color $t;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:focus {
-      box-shadow: 0px 0px 0px 3px $green-100;
-      border-radius: 3px;
-    }
-
-    &:active {
-      background-color: rgba($white, 0.1);
-    }
+    margin-bottom: 30;
   }
 
   &__main {
-    padding: 30px 0 24px;
+    padding: 30 0 24px;
     border-bottom: 1px solid rgba($white, 0.1);
   }
 
@@ -310,11 +298,7 @@
     justify-content: space-between;
   }
 
-  &__content-right {
-    font-style: normal;
-  }
-
-  &__list-links {
+  &__items {
     column-count: 3;
     column-gap: 75px;
     height: 113px;
@@ -330,13 +314,13 @@
     margin-bottom: 18px;
     transition: opacity $t, box-shadow $t, border-radius $t, color $t;
 
-    &:hover {
-      opacity: 0.7;
+    &:focus {
+      box-shadow: 0 0 0 2px $green-100;
+      border-radius: 2px;
     }
 
-    &:focus {
-      box-shadow: 0px 0px 0px 2px $green-100;
-      border-radius: 2px;
+    &:hover {
+      opacity: 0.7;
     }
 
     &:active {
@@ -345,10 +329,10 @@
   }
 
   &__bottom {
-    height: 77px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 24px 0;
   }
 
   &__bottom-text {
@@ -357,15 +341,21 @@
 }
 
 .form-subscribe {
-  display: flex;
-  height: 40px;
+
+  &__label {
+    display: block;
+  }
+
+  &__inner {
+    display: flex;
+  }
 
   &__field {
-    width: 180px;
+    width: 181px;
     background-color: $white;
     color: $dark-900;
     padding: 12px;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 6px 0 0 6px;
     transition: box-shadow $t, border-radius $t;
 
     &::placeholder {
@@ -373,32 +363,32 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 3px $green-100;
-      border-radius: 6px 0px 0px 6px;
+      box-shadow: 0 0 0 2px $green-100;
+      border-radius: 6px 0 0 6px;
     }
   }
 
   &__btn {
     background-color: $green-900;
-    width: 126px;
+    padding: 12px 17px;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0 6px 6px 0;
     transition: background-color $t, box-shadow $t, border-radius $t, color $t;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $green-200;
+      border-radius: 0 6px 6px 0;
+    }
 
     &:hover {
       background-color: $green-800;
     }
 
-    &:focus {
-      box-shadow: 0 0 0 3px $green-200;
-      border-radius: 0 6px 6px 0;
-    }
-
     &:active {
       color: rgba($white, 0.5);
-      box-shadow: inset 0px 4px 4px rgba($black, 0.25);
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
     }
   }
 }
@@ -421,13 +411,13 @@
     background-position: center;
     transition: opacity $t, box-shadow $t, border-radius $t, filter $t;
 
-    &:hover {
-      opacity: 0.7;
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
     }
 
-    &:focus {
-      box-shadow: 0px 0px 0px 3px $green-200;
-      border-radius: 3px;
+    &:hover {
+      opacity: 0.7;
     }
 
     &:active {
@@ -452,14 +442,14 @@
     background-size: contain;
     background-position: center;
     transition: opacity $t, box-shadow $t, border-radius $t, filter $t;
+    
+        &:focus {
+          box-shadow: 0 0 0 3px $green-200;
+          border-radius: 3px;
 
     &:hover {
       opacity: 0.7;
     }
-
-    &:focus {
-      box-shadow: 0px 0px 0px 3px $green-200;
-      border-radius: 3px;
     }
 
     &:active {

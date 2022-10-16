@@ -9,9 +9,9 @@
   }
 }
 
-@mixin psevdo () {
-  position: absolute;
+@mixin psevdo {
   content: '';
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
