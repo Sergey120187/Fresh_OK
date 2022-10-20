@@ -4,8 +4,6 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: $dark-900;
-  background-color: #ccc;
-  // Серый бэкграунд колор на body, чтобы переключение между темным vscode и браузером было не таким контрастным - глазам легче ))))
 }
 
 .wrapper {
@@ -34,6 +32,16 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.btn {
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  background-color: $green-900;
+  padding: 11px 24px;
+  border-radius: 6px;
+  color: $white;
 }
 
 .psevdo {

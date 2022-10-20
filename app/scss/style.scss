@@ -279,6 +279,56 @@
   }
 }
 
+.slider {
+
+  &__item {
+    padding: 142px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--no-text {
+      padding: 129px 0;
+    }
+  }
+
+  &__inner {
+    max-width: 1290px;
+    width: 100%;
+    padding: 24px 24px 36px 24px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: rgba($white, 0.8);
+  }
+
+  &__titles {
+    margin-bottom: 6px;
+
+    &--no-text {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-family: $Ruda;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: $dark-500;
+
+    &--sale {
+      color: $red-900;
+    }
+  }
+
+  &__text {
+    margin-bottom: 47px;
+  }
+}
+
+
+
 .footer {
   background-color: $dark-800;
   font-size: 14px;

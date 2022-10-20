@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
   <div class="wrapper">
     <header class="header">
       <nav class="header__nav">
@@ -79,8 +78,47 @@
         </div>
       </nav>
     </header>
+
     <main class="main">
+      <h1 class="sr-only">>ФРЕШОК - Онлайн-Маркет | Главная страница</h1>
+
+      <section class="slider">
+        <h2 class="sr-only">Акции</h2>
+        <ul class="slider__list">
+          <li class="slider__item" style="background-image: url('images/slider/1.jpg');">
+            <div class="slider__inner">
+              <div class="slider__titles">
+                <span class="slider__title">Свежачок вам в хату</span>
+                <span class="slider__title slider__title--sale">Скидка -50%</span>
+              </div>
+              <p class="slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
+              <a class="slider__link btn" href="#">Купить сейчас</a>
+            </div>
+          </li>
+          <li class="slider__item" style="background-image: url('images/slider/2.jpg');">
+            <div class="slider__inner">
+              <div class="slider__titles">
+                <span class="slider__title">Накрути себе томатов</span>
+                <span class="slider__title slider__title--sale">Акция: 3 кг по цене 1</span>
+              </div>
+              <p class="slider__text">Только с 12 по 15 июля скидка на домашние помидорчики</p>
+              <a class="slider__link btn" href="#">Купить сейчас</a>
+            </div>
+          </li>
+          <li class="slider__item slider__item--no-text" style="background-image: url('images/slider/3.jpg');">
+            <div class="slider__inner">
+              <div class="slider__titles slider__titles--no-text">
+                <span class="slider__title">Пусть остальные позеленеют от зависти</span>
+                <span class="slider__title slider__title--sale">Распродажа зелени</span>
+              </div>
+              <a class="slider__link btn" href="#">Купить сейчас</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__main">
@@ -160,7 +198,8 @@
           <span class="footer__bottom-text">© 2021 Фрешок</span>
           <ul class="payment">
             <li class="payment__item">
-              <a class="payment__link" href="#" style="background-image: url('images/icons/visa.svg'); width: 93px;" target="_blank">
+              <a class="payment__link" href="#" style="background-image: url('images/icons/visa.svg'); width: 93px;"
+                target="_blank">
                 <span class="sr-only">VISA</span>
               </a>
             </li>
