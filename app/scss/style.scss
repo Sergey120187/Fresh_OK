@@ -2,6 +2,7 @@
 @import 'mixin';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -304,7 +305,7 @@
     margin-bottom: 6px;
 
     &--no-text {
-      margin-bottom: 23px;
+      margin-bottom: 24px;
     }
   }
 
@@ -324,6 +325,42 @@
 
   &__text {
     margin-bottom: 47px;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  background-color: rgba($white, 0.8);
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  &::before {
+    @include psevdo;
+    width: 19px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slick-prev {
+  left: 60px;
+  
+  &::before {
+    background-image: url('../images/icons/slider-icon/arrow-left.svg');
+  }
+}
+
+.slick-next {
+  right: 60px;
+
+  &::before {
+    background-image: url('../images/icons/slider-icon/arrow-right.svg');
   }
 }
 
