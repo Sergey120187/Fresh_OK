@@ -280,7 +280,7 @@
   }
 }
 
-.slider {
+.main-slider {
 
   &__item {
     padding: 142px 0;
@@ -301,7 +301,13 @@
     background-color: rgba($white, 0.8);
   }
 
-  &__titles {
+  &__title {
+    font-family: $Ruda;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: $dark-500;
     margin-bottom: 6px;
 
     &--no-text {
@@ -309,18 +315,9 @@
     }
   }
 
-  &__title {
+  &__subtitle {
     display: block;
-    font-family: $Ruda;
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 1.3;
-    text-transform: uppercase;
-    color: $dark-500;
-
-    &--sale {
-      color: $red-900;
-    }
+    color: $red-900;
   }
 
   &__text {
@@ -350,9 +347,9 @@
 
 .slick-prev {
   left: 60px;
-  
+
   &::before {
-    background-image: url('../images/icons/slider-icon/arrow-left.svg');
+    background-image: url('../images/icons/main-slider-icon/arrow-left.svg');
   }
 }
 
@@ -360,7 +357,7 @@
   right: 60px;
 
   &::before {
-    background-image: url('../images/icons/slider-icon/arrow-right.svg');
+    background-image: url('../images/icons/main-slider-icon/arrow-right.svg');
   }
 }
 
@@ -372,7 +369,7 @@
   color: $white;
 
   &__logo {
-    margin-bottom: 30;
+    margin-bottom: 30px;
   }
 
   &__main {
@@ -385,7 +382,7 @@
     justify-content: space-between;
   }
 
-  &__items {
+  &__list {
     column-count: 3;
     column-gap: 75px;
     height: 113px;
@@ -431,6 +428,7 @@
 
   &__label {
     display: block;
+    margin-bottom: 18px;
   }
 
   &__inner {
@@ -529,6 +527,14 @@
     background-size: contain;
     background-position: center;
     transition: opacity $t, box-shadow $t, border-radius $t, filter $t;
+
+    &--visa {
+      width: 93px;
+    }
+
+    &--mastercard {
+      width: 49px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
