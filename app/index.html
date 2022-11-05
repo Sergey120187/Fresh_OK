@@ -1,75 +1,220 @@
+<!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ФРЕШОК | Онлайн-Маркет</title>
+  <title>ФРЕШОК - Онлайн-Маркет | Главная страница</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicon180.png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
 
-  <header class="header">
-    <nav class="header__nav">
-      <div class="header__top">
-        <div class="container">
-          <div class="menu">
-            <ul class="menu__left">
-              <li class="menu__left-item">
-                <a class="menu__left-link menu__left-link--delivery" href="#">Адрес и время доставки</a>
-              </li>
-              <li class="menu__left-item">
-                <a class="menu__left-link menu__left-link--phone" href="tel:+7907288365">Горячая линия 24/7</a>
-              </li>
-            </ul>
-            <ul class="menu__right">
-              <li class="menu__right-item">
-                <a class="menu__right-link" href="#">Доставка</a>
-              </li>
-              <li class="menu__right-item">
-                <a class="menu__right-link" href="#">О нас</a>
-              </li>
-              <li class="menu__right-item">
-                <a class="menu__right-link" href="#">Новости</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="header-main">
-        <div class="container">
-          <div class="header-main__inner">
-            <a class="header__logo" href="#">
-              <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип">
-            </a>
-            <button class="header-main__catalog" type="button">Каталог продуктов</button>
-            <form class="form-search">
-              <input class="form-search__field" type="search" name="search" placeholder="Найти в магазине ..." aria-label="Найти в магазине" required>
-              <button class="form-search__btn" type="submit">Поиск</button>
-            </form>
-            <div class="user-nav">
-              <a class="user-nav__link psevdo" href="#" style="background-image: url('images/header-icon/icon-user.svg')" title="Профиль">
-                <span class="sr-only">Профиль</span>
-              </a>
-              <a class="user-nav__link psevdo" href="#" style="background-image: url('images/header-icon/icon-heart.svg')" title="Избранное">
-                <span class="sr-only">Избранное</span>
-                <span class="user-nav__num">12</span>
-              </a>
-              <button class="user-nav__link psevdo" type="button" style="background-image: url('images/header-icon/icon-cart.svg')"title="Корзина">
-                <span class="sr-only">Корзина</span>
-                <span class="user-nav__num">12</span>
-              </button>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__top">
+          <div class="container">
+            <div class="menu">
+              <ul class="menu__left">
+                <li class="menu__left-item">
+                  <a class="menu__left-link menu__left-link--delivery" href="#">Адрес и время доставки</a>
+                </li>
+                <li class="menu__left-item">
+                  <a class="menu__left-link menu__left-link--phone" href="tel:+7907288365">Горячая линия 24/7</a>
+                </li>
+              </ul>
+              <ul class="menu__right">
+                <li class="menu__right-item">
+                  <a class="menu__right-link" href="#">Доставка</a>
+                </li>
+                <li class="menu__right-item">
+                  <a class="menu__right-link" href="#">О нас</a>
+                </li>
+                <li class="menu__right-item">
+                  <a class="menu__right-link" href="#">Новости</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+        <div class="header-main">
+          <div class="container">
+            <div class="header-main__inner">
+              <a class="logo header__logo" href="#">
+                <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип">
+              </a>
+              <button class="header-main__catalog" type="button">Каталог продуктов</button>
+              <form class="form-search" action="#">
+                <label class="sr-only" for="search">Поиск по магазину</label>
+                <input class="form-search__field" type="search" id="search" name="search"
+                  placeholder="Найти в магазине ..." required>
+                <button class="form-search__btn" type="submit">Поиск</button>
+              </form>
+              <ul class="user-nav">
+                <li class="user-nav__item">
+                  <a class="user-nav__link user-nav__link--profile" href="#">
+                    <span class="sr-only">Профиль</span>
+                  </a>
+                </li>
+                <li class="user-nav__item">
+                  <a class="user-nav__link user-nav__link--favourites" href="#">
+                    <span class="sr-only">Избранное</span>
+                    <span class="user-nav__num">12</span>
+                  </a>
+                </li>
+                <li class="user-nav__item">
+                  <button class="user-nav__link user-nav__link--cart" type="button">
+                    <span class="sr-only">Корзина</span>
+                    <span class="user-nav__num">12</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="sr-only">>ФРЕШОК - Онлайн-Маркет | Главная страница</h1>
+
+      <section class="main-slider">
+        <h2 class="sr-only">Акции</h2>
+        <ul class="main-slider__list">
+          <li class="main-slider__item" style="background-image: url('images/main-slider/1.jpg');">
+            <div class="main-slider__inner">
+              <h3 class="main-slider__title">Свежачок вам в хату
+                <span class="main-slider__subtitle">Скидка -50%</span>
+              </h3>
+              <p class="main-slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+              </p>
+              <a class="btn" href="#">Купить сейчас</a>
+            </div>
+          </li>
+          <li class="main-slider__item" style="background-image: url('images/main-slider/2.jpg');">
+            <div class="main-slider__inner">
+              <h3 class="main-slider__title">Накрути себе томатов
+                <span class="main-slider__subtitle">Акция: 3 кг по цене 1</span>
+              </h3>
+              <p class="main-slider__text">Только с 12 по 15 июля скидка на домашние помидорчики</p>
+              <a class="btn" href="#">Купить сейчас</a>
+            </div>
+          </li>
+          <li class="main-slider__item main-slider__item--no-text"
+            style="background-image: url('images/main-slider/3.jpg');">
+            <div class="main-slider__inner">
+              <h3 class="main-slider__title main-slider__title--no-text">Пусть остальные<br> позеленеют от зависти
+                <span class="main-slider__subtitle">Распродажа зелени</span>
+              </h3>
+              <a class="btn" href="#">Купить сейчас</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__main">
+          <a class="logo footer__logo" href="#">
+            <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип">
+          </a>
+          <div class="footer__content">
+            <form class="form-subscribe" action="#">
+              <label class="form-subscribe__label" for="subscribe">Следите за нашими акциями</label>
+              <div class="form-subscribe__inner">
+                <input class="form-subscribe__field" type="email" name="email" id="subscribe"
+                  placeholder="email@email.com" required>
+                <button class="form-subscribe__btn" type="submit">Подписаться</button>
+              </div>
+            </form>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">О нас</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Контакты</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Публичная оферта</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Оплата и доставка</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Вакансии</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Акции</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Отзывы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Новости</a>
+              </li>
+            </ul>
+            <address class="footer__contacts">
+              <a class="footer__link" href="tel:+7907288365">Горячая линия +7 907 288 365</a>
+              <p class="footer__text">Санкт-Петербург, ул. Ленина, 1</p>
+              <ul class="social">
+                <li class="social__item">
+                  <a class="social__link" href="#"
+                    style="background-image: url('images/icons/social-icon/facebook.svg')" target="_blank">
+                    <span class="sr-only">Facebook</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#" style="background-image: url('images/icons/social-icon/youtube.svg')"
+                    target="_blank">
+                    <span class="sr-only">Youtube</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#"
+                    style="background-image: url('images/icons/social-icon/telegram.svg')" target="_blank">
+                    <span class="sr-only">Telegram</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#"
+                    style="background-image: url('images/icons/social-icon/instagram.svg')" target="_blank">
+                    <span class="sr-only">Instagram</span>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span class="footer__bottom-text">© 2021 Фрешок</span>
+          <ul class="payment">
+            <li class="payment__item">
+              <a class="payment__link payment__link--visa" href="#"
+                style="background-image: url('images/icons/visa.svg')" target="_blank">
+                <span class="sr-only">VISA</span>
+              </a>
+            </li>
+            <li class="payment__item">
+              <a class="payment__link payment__link--mastercard" href="#"
+                style="background-image: url('images/icons/mastercard.svg')" target="_blank">
+                <span class="sr-only">Mastercard</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </nav>
-  </header>
+    </footer>
+  </div>
 
 
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

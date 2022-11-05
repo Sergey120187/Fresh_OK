@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  // Поддержка во всех современных браузерах. Не поддерживается IE11 и Opera Mini
 }
 
 *,
@@ -58,6 +59,10 @@ button {
 
 button {
   cursor: pointer;
+}
+
+address {
+  font-style: normal;
 }
 
 a {
