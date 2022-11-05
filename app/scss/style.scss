@@ -74,7 +74,7 @@
 
       &::before {
         width: 32px;
-        background-image: url('../images/icons/header-icon/icon-delivery.svg');
+        background-image: url('../images/icons/icon-delivery.svg');
         left: 0;
       }
     }
@@ -84,7 +84,7 @@
 
       &::before {
         width: 23px;
-        background-image: url('../images/icons/header-icon/icon-phone.svg');
+        background-image: url('../images/icons/icon-phone.svg');
         left: 11px;
       }
     }
@@ -124,7 +124,7 @@
       width: 34px;
       height: 25px;
       left: 15px;
-      background-image: url('../images/icons/header-icon/icon-nav.svg');
+      background-image: url('../images/icons/icon-nav.svg');
     }
 
     &::after {
@@ -132,7 +132,7 @@
       height: 8px;
       right: 18px;
       top: 22px;
-      background-image: url('../images/icons/header-icon/icon-chevron.svg');
+      background-image: url('../images/icons/icon-chevron.svg');
     }
 
     &:focus {
@@ -156,7 +156,7 @@
     background-color: $white;
     padding: 15px 15px 15px 51px;
     border-radius: 6px 0 0 6px;
-    background-image: url('../images/icons/header-icon/icon-search.svg');
+    background-image: url('../images/icons/icon-search.svg');
     background-repeat: no-repeat;
     background-position: 13px center;
     transition: box-shadow $t, border-radius $t;
@@ -226,13 +226,13 @@
 
     &--profile {
       &::before {
-        background-image: url('../images/icons/header-icon/icon-user.svg');
+        background-image: url('../images/icons/icon-user.svg');
       }
     }
 
     &--favourites {
       &::before {
-        background-image: url('../images/icons/header-icon/icon-heart.svg');
+        background-image: url('../images/icons/icon-heart.svg');
       }
     }
 
@@ -240,19 +240,18 @@
       &::before {
         left: 9px;
         top: 9px;
-        background-image: url('../images/icons/header-icon/icon-cart.svg');
+        background-image: url('../images/icons/icon-cart.svg');
       }
     }
 
-    &:focus {
-      background-color: rgba($white, 0.1);
-      box-shadow: inset 0 0 0 3px $green-100;
-      border-radius: 3px;
-    }
-
+    &:focus,
     &:hover {
       background-color: rgba($white, 0.1);
       border-radius: 3px;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 3px $green-100;
     }
 
     &:active {
@@ -280,6 +279,7 @@
 
   &__wrapper {
     height: 600px;
+    padding: 40px 0;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
@@ -339,7 +339,7 @@
   left: 60px;
 
   &::before {
-    background-image: url('../images/icons/main-slider-icon/arrow-left.svg');
+    background-image: url('../images/icons/arrow-left.svg');
   }
 }
 
@@ -347,11 +347,9 @@
   right: 60px;
 
   &::before {
-    background-image: url('../images/icons/main-slider-icon/arrow-right.svg');
+    background-image: url('../images/icons/arrow-right.svg');
   }
 }
-
-
 
 .footer {
   background-color: $dark-800;
