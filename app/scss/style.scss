@@ -74,7 +74,7 @@
 
       &::before {
         width: 32px;
-        background-image: url('../images/icons/header-icon/icon-delivery.svg');
+        background-image: url('../images/icons/icon-delivery.svg');
         left: 0;
       }
     }
@@ -84,7 +84,7 @@
 
       &::before {
         width: 23px;
-        background-image: url('../images/icons/header-icon/icon-phone.svg');
+        background-image: url('../images/icons/icon-phone.svg');
         left: 11px;
       }
     }
@@ -102,11 +102,11 @@
 
   &__catalog {
     background-color: $white;
-    height: 50px;
-    width: 240px;
+    max-width: 240px;
+    width: 100%;
     position: relative;
     border-radius: 6px;
-    padding-left: 61px;
+    padding: 15px 30px 15px 61px;
     text-align-last: left;
     margin-right: 30px;
     font-weight: 600;
@@ -114,14 +114,6 @@
     color: $green-900;
     letter-spacing: 0.03em;
     transition: box-shadow $t, border-radius $t;
-
-    &:focus {
-      box-shadow: 0 0 0 4px rgba($white, 0.5);
-      border-radius: 6px;
-    }
-  }
-
-  &__catalog {
 
     &::before,
     &::after {
@@ -132,17 +124,20 @@
       width: 34px;
       height: 25px;
       left: 15px;
-      background-image: url('../images/icons/header-icon/icon-nav.svg');
+      background-image: url('../images/icons/icon-nav.svg');
     }
-  }
 
-  &__catalog {
     &::after {
       width: 8px;
       height: 8px;
       right: 18px;
       top: 22px;
-      background-image: url('../images/icons/header-icon/icon-chevron.svg');
+      background-image: url('../images/icons/icon-chevron.svg');
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($white, 0.5);
+      border-radius: 6px;
     }
   }
 }
@@ -161,7 +156,7 @@
     background-color: $white;
     padding: 15px 15px 15px 51px;
     border-radius: 6px 0 0 6px;
-    background-image: url('../images/icons/header-icon/icon-search.svg');
+    background-image: url('../images/icons/icon-search.svg');
     background-repeat: no-repeat;
     background-position: 13px center;
     transition: box-shadow $t, border-radius $t;
@@ -179,7 +174,8 @@
   }
 
   &__btn {
-    width: 158px;
+    max-width: 158px;
+    width: 100%;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.03em;
@@ -230,33 +226,32 @@
 
     &--profile {
       &::before {
-        background-image: url('../images/icons/header-icon/icon-user.svg');
+        background-image: url('../images/icons/icon-user.svg');
       }
     }
 
     &--favourites {
       &::before {
-        background-image: url('../images/icons/header-icon/icon-heart.svg');
+        background-image: url('../images/icons/icon-heart.svg');
       }
     }
 
     &--cart {
       &::before {
-        left: 9px;
-        top: 9px;
-        background-image: url('../images/icons/header-icon/icon-cart.svg');
+        left: 11px;
+        top: 8px;
+        background-image: url('../images/icons/icon-cart.svg');
       }
     }
 
-    &:focus {
-      background-color: rgba($white, 0.1);
-      box-shadow: inset 0 0 0 3px $green-100;
-      border-radius: 3px;
-    }
-
+    &:focus,
     &:hover {
       background-color: rgba($white, 0.1);
       border-radius: 3px;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 3px $green-100;
     }
 
     &:active {
@@ -282,20 +277,19 @@
 
 .main-slider {
 
-  &__item {
-    padding: 142px 0;
+  &__wrapper {
+    height: 600px;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    &--no-text {
-      padding: 129px 0;
-    }
   }
 
   &__inner {
     max-width: 1290px;
     width: 100%;
-    padding: 24px 24px 36px 24px;
+    padding: 24px;
     margin: 0 auto;
     border-radius: 4px;
     background-color: rgba($white, 0.8);
@@ -308,11 +302,7 @@
     line-height: 1.3;
     text-transform: uppercase;
     color: $dark-500;
-    margin-bottom: 6px;
-
-    &--no-text {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 7px;
   }
 
   &__subtitle {
@@ -321,47 +311,117 @@
   }
 
   &__text {
-    margin-bottom: 47px;
+    margin-bottom: 34px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    background-color: rgba($white, 0.8);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color $t, box-shadow $t;
+    z-index: 1;
+
+    &::before {
+      @include psevdo;
+      width: 19px;
+      height: 32px;
+      transform: translate(-50%, -50%);
+      transition: filter 0.3s;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px rgba($green-900, 0.5);
+    }
+
+    &:hover {
+      background-color: $green-200;
+      
+      &::before {
+        filter: invert(67%) sepia(31%) saturate(7058%) hue-rotate(50deg) brightness(93%) contrast(89%);
+      }
+    }
+
+    &:active {
+      background-color: rgba($white, 0.8);
+    }
+  }
+
+  .slick-prev {
+    left: 60px;
+
+    &::before {
+      background-image: url('../images/icons/arrow-left.svg');
+    }
+  }
+
+  .slick-next {
+    right: 60px;
+
+    &::before {
+      background-image: url('../images/icons/arrow-right.svg');
+    }
   }
 }
 
-.slick-prev,
-.slick-next {
-  width: 60px;
-  height: 60px;
-  font-size: 0;
-  background-color: rgba($white, 0.8);
-  border-radius: 6px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+.advantages {
+  background-color: $silver-100;
+  padding: 48px 0 29px;
 
-  &::before {
-    @include psevdo;
-    width: 19px;
-    height: 32px;
-    transform: translate(-50%, -50%);
+  &__list {
+    padding: 0 185px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 264px;
+    width: 100%;
+    padding-left: 74px;
+    position: relative;
+
+    &::before {
+      @include psevdo;
+      width: 50px;
+      height: 50px;
+      left: 0;
+    }
+    
+    &--delivery {
+      &::before {
+        background-image: url('../images/icons/advantages/icon-scooter.svg');
+      }
+    }
+
+    &--return {
+      &::before {
+        background-image: url('../images/icons/advantages/icon-return_box.svg');
+      }
+    }
+
+    &--support {
+      &::before {
+        background-image: url('../images/icons/advantages/icon-24_hours.svg');
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $dark-500;
   }
 }
-
-.slick-prev {
-  left: 60px;
-
-  &::before {
-    background-image: url('../images/icons/main-slider-icon/arrow-left.svg');
-  }
-}
-
-.slick-next {
-  right: 60px;
-
-  &::before {
-    background-image: url('../images/icons/main-slider-icon/arrow-right.svg');
-  }
-}
-
-
 
 .footer {
   background-color: $dark-800;
