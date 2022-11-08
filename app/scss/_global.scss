@@ -84,3 +84,16 @@ body {
     background-color: rgba($white, 0.1);
   }
 }
+
+.section {
+  padding-top: 72px;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $Ruda;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}

@@ -341,7 +341,7 @@
 
     &:hover {
       background-color: $green-200;
-      
+
       &::before {
         filter: invert(67%) sepia(31%) saturate(7058%) hue-rotate(50deg) brightness(93%) contrast(89%);
       }
@@ -391,7 +391,7 @@
       height: 50px;
       left: 0;
     }
-    
+
     &--delivery {
       &::before {
         background-image: url('../images/icons/advantages/icon-scooter.svg');
@@ -420,6 +420,149 @@
   &__text {
     font-size: 14px;
     color: $dark-500;
+  }
+}
+
+.best {
+  letter-spacing: 0.03em;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 48px;
+  }
+
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 51px;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    transition: color $t, box-shadow $t, border-radius $t;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+
+    // &:active {
+    //   border-bottom: 2px $green-200;
+    // }
+  }
+}
+
+.product {
+  border: 1px solid rgba($green-900, 0.2);
+  border-radius: 6px;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 55px;
+  height: 100%;
+
+  &__header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  &__feature {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1;
+    color: $white;
+    background-color: $green-900;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+
+    &--sale {
+      background-color: $red-900;
+    }
+
+    &--hit {
+      background-color: $orange-900;
+    }
+  }
+
+  &__favourite {
+    position: absolute;
+    right: 6px;
+    top: 12px;
+    width: 44px;
+    height: 44px;
+    background-image: url('../images/icons/icon-heart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(24%) sepia(0%) saturate(10%) hue-rotate(295deg) brightness(107%) contrast(81%);
+  }
+
+  &__img-wrapper {
+    margin-bottom: 9px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 18px;
+    margin-bottom: auto;
+  }
+
+  &__footer {
+    padding: 9px 18px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__price {
+    display: block;
+    font-size: 14px;
+    color: $dark-500;
+    line-height: 1;
+
+    &--old {
+      color: $silver-600;
+      margin-bottom: 3px;
+      // Как перечеркнуть?
+    }
+  }
+
+  &__cart {
+    width: 32px;
+    height: 32px;
+    background-color: $green-900;
+    border-radius: 3px;
+    background-image: url('../images/icons/icon-cart-mini.svg');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
