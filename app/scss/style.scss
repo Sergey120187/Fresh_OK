@@ -427,8 +427,8 @@
   letter-spacing: 0.03em;
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-bottom: 48px;
   }
@@ -481,14 +481,15 @@
 
   &__header {
     position: absolute;
-    left: 12px;
-    top: 12px;    
+    width: 100%;
+    top: 0;
   }
 
   &__features {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 12px;
   }
 
   &__feature {
@@ -513,11 +514,14 @@
 
   &__favourite {
     position: absolute;
-    right: 0;
-    top: 17px;
+    right: 6px;
+    top: 12px;
     width: 44px;
     height: 44px;
     background-image: url('../images/icons/icon-heart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(24%) sepia(0%) saturate(10%) hue-rotate(295deg) brightness(107%) contrast(81%);
   }
 
   &__img-wrapper {
@@ -547,6 +551,7 @@
     &--old {
       color: $silver-600;
       margin-bottom: 3px;
+      // Как перечеркнуть?
     }
   }
 
@@ -554,6 +559,10 @@
     width: 32px;
     height: 32px;
     background-color: $green-900;
+    border-radius: 3px;
+    background-image: url('../images/icons/icon-cart-mini.svg');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
