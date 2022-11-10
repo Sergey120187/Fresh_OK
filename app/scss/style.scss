@@ -277,13 +277,16 @@
 
 .main-slider {
 
+  &__item {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   &__wrapper {
     height: 600px;
     padding: 40px 0;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   &__inner {
@@ -583,13 +586,16 @@
     margin-right: -70px;
   }
 
+  &__item {
+    margin-bottom: 18px;
+  }
+
   &__text {
     margin-bottom: 18px;
   }
 
   &__link {
     display: inline-block;
-    margin-bottom: 18px;
     transition: opacity $t, box-shadow $t, border-radius $t, color $t;
 
     &:focus {
