@@ -427,7 +427,6 @@
 }
 
 .best {
-  letter-spacing: 0.03em;
 
   &__list {
     display: grid;
@@ -435,7 +434,6 @@
     gap: 30px;
     margin-bottom: 48px;
   }
-
 }
 
 .filters {
@@ -454,6 +452,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 15px;
+    letter-spacing: 0.03em;
     transition: color $t, box-shadow $t, border-radius $t;
 
     &:focus {
@@ -472,27 +471,28 @@
 }
 
 .product {
-  border: 1px solid rgba($green-900, 0.2);
+  border: 1px solid rgba($dark-900, 0.2);
   border-radius: 6px;
   max-width: 300px;
   width: 100%;
+  letter-spacing: 0.03em;
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 55px;
+  padding: 51px 0 17px;
   height: 100%;
 
   &__header {
     position: absolute;
     width: 100%;
     top: 0;
+    padding: 11px;
   }
 
   &__features {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 12px;
   }
 
   &__feature {
@@ -504,8 +504,7 @@
     background-color: $green-900;
     padding: 3px 6px;
     border-radius: 6px;
-    margin-bottom: 6px;
-
+    
     &--sale {
       background-color: $red-900;
     }
@@ -513,33 +512,45 @@
     &--hit {
       background-color: $orange-900;
     }
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
   }
 
   &__favourite {
     position: absolute;
-    right: 6px;
-    top: 12px;
+    right: 5px;
+    top: 9px;
     width: 44px;
     height: 44px;
     background-image: url('../images/icons/icon-heart.svg');
     background-repeat: no-repeat;
     background-position: center;
+    margin-left: auto;
     filter: invert(24%) sepia(0%) saturate(10%) hue-rotate(295deg) brightness(107%) contrast(81%);
   }
 
-  &__img-wrapper {
-    margin-bottom: 9px;
+  &__link {
+    display: block;
+    margin-bottom: 13px;
+  }
+
+  &__img {
+    object-fit: contain;
   }
 
   &__title {
     font-size: 14px;
     font-weight: 600;
-    padding: 0 18px;
-    margin-bottom: auto;
+    letter-spacing: 0.03em;
+    padding: 0 17px;
+    margin-bottom: 10px;
   }
 
   &__footer {
-    padding: 9px 18px 18px;
+    margin-top: auto;
+    padding: 0px 17px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
