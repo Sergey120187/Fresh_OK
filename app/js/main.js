@@ -2,7 +2,8 @@ $(function(){
 
   $('.main-slider__list').slick({
     // autoplay: true,
-    playSpeed: 2000
+    playSpeed: 2000,
+    infinite: false
   })
 
 });

@@ -148,7 +148,6 @@
   width: 100%;
   font-size: 14px;
   margin-right: auto;
-  margin-block-end: 0;
 
   &__field {
     max-width: 418px;
@@ -370,6 +369,14 @@
       background-image: url('../images/icons/arrow-right.svg');
     }
   }
+
+  .slick-disabled {
+    pointer-events: none;
+    
+    &::before {
+      filter: invert(85%) sepia(11%) saturate(0%) hue-rotate(133deg) brightness(93%) contrast(86%);
+    }
+  }
 }
 
 .advantages {
@@ -377,9 +384,8 @@
   padding: 48px 0 29px;
 
   &__list {
-    padding: 0 185px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__item {
@@ -387,6 +393,10 @@
     width: 100%;
     padding-left: 74px;
     position: relative;
+
+    &:not(:last-child) {
+      margin-right: 65px;
+    }
 
     &::before {
       @include psevdo;
@@ -397,19 +407,19 @@
 
     &--delivery {
       &::before {
-        background-image: url('../images/icons/advantages/icon-scooter.svg');
+        background-image: url('../images/icons/advantages/icon-delivery.svg');
       }
     }
 
     &--return {
       &::before {
-        background-image: url('../images/icons/advantages/icon-return_box.svg');
+        background-image: url('../images/icons/advantages/icon-return.svg');
       }
     }
 
     &--support {
       &::before {
-        background-image: url('../images/icons/advantages/icon-24_hours.svg');
+        background-image: url('../images/icons/advantages/icon-support.svg');
       }
     }
   }
@@ -470,26 +480,20 @@
   }
 }
 
-.product {
+.product-card {
   border: 1px solid rgba($dark-900, 0.2);
   border-radius: 6px;
-  max-width: 300px;
-  width: 100%;
-  letter-spacing: 0.03em;
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 51px 0 17px;
   height: 100%;
-
+  
   &__header {
     position: absolute;
     width: 100%;
     top: 0;
     padding: 11px;
-  }
-
-  &__features {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -500,6 +504,7 @@
     font-weight: 700;
     font-size: 10px;
     line-height: 1;
+    letter-spacing: 0.03em;
     color: $white;
     background-color: $green-900;
     padding: 3px 6px;
@@ -559,6 +564,7 @@
   &__price {
     display: block;
     font-size: 14px;
+    letter-spacing: 0.03em;
     color: $dark-500;
     line-height: 1;
 
