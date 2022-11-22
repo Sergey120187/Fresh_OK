@@ -533,7 +533,7 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-left: auto;
-    filter: invert(24%) sepia(0%) saturate(10%) hue-rotate(295deg) brightness(107%) contrast(81%);
+    filter: invert(24%) sepia(0) saturate(10%) hue-rotate(295deg) brightness(107%) contrast(81%);
   }
 
   &__link {
