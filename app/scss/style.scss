@@ -525,6 +525,7 @@
 
   &__favourite {
     position: absolute;
+    // не получилось избавиться от абсолют
     right: 5px;
     top: 9px;
     width: 44px;
@@ -571,7 +572,17 @@
     &--old {
       color: $silver-600;
       margin-bottom: 3px;
-      // Как перечеркнуть?
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        border-bottom: 1px solid $silver-600;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        transform: rotate(-12deg);
+      }
     }
   }
 
